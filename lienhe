@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dainguyen Coffee - Cà phê rang xay từ Tây Nguyên. Cung cấp cà phê cho quán, đại lý và đối tác kinh doanh.">
+  <meta name="theme-color" content="#3b281d">
+  <title>Liên hệ | Dainguyen Coffee</title>
+
+  <style>
+    :root {
+      --coffee: #493020;
+      --coffee-dark: #2c1c14;
+      --gold: #b58a52;
+      --cream: #f8f4ec;
+      --text: #34291f;
+      --muted: #74685c;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(35, 22, 15, .96),
+        rgba(83, 53, 32, .92));
+      color: var(--white);
+      padding: 70px 20px 65px;
+      text-align: center;
+    }
+
+    .brand {
+      font-size: 14px;
+      letter-spacing: 5px;
+      color: #e0bd8b;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.2;
+      margin: 0 auto 18px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #eee1d2;
+      font-size: 17px;
+    }
+
+    .hero-line {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin: 26px auto;
+    }
+
+    .container {
+      width: min(100% - 36px, 1000px);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 55px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-heading span {
+      color: #946c40;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(27px, 4vw, 38px);
+      margin: 8px 0;
+      color: var(--coffee);
+      line-height: 1.3;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 10px auto 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid #e8dfd2;
+      border-radius: 14px;
+      padding: 26px;
+      box-shadow: 0 5px 20px rgba(57, 37, 23, .04);
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: #f1e7d8;
+      font-size: 23px;
+      margin-bottom: 17px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      color: var(--coffee);
+    }
+
+    .contact-card p {
+      margin: 0 0 15px;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-link {
+      display: inline-block;
+      color: #80542d;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    .quick-contact {
+      background: #eee4d6;
+      padding: 36px 25px;
+      border-radius: 16px;
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    .quick-contact h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--coffee);
+      font-size: 27px;
+      margin: 0 0 8px;
+    }
+
+    .quick-contact p {
+      color: var(--muted);
+      margin: 0 auto 23px;
+      max-width: 600px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 21px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: white;
+      background: var(--coffee);
+    }
+
+    .button-primary:hover {
+      background: var(--coffee-dark);
+    }
+
+    .button-outline {
+      color: var(--coffee);
+      border: 1px solid var(--coffee);
+      background: transparent;
+    }
+
+    .business-section {
+      background: var(--white);
+    }
+
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      text-align: center;
+    }
+
+    .business-item {
+      padding: 20px 12px;
+    }
+
+    .business-item .symbol {
+      font-size: 30px;
+    }
+
+    .business-item h3 {
+      color: var(--coffee);
+      font-size: 17px;
+      margin: 10px 0 6px;
+    }
+
+    .business-item p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    footer {
+      background: var(--coffee-dark);
+      color: #eee1d2;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: #e0bd8b;
+      letter-spacing: 2px;
+    }
+
+    footer p {
+      font-size: 13px;
+      margin: 8px 0 0;
+      color: #cbb9a7;
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        padding: 55px 20px 48px;
+      }
+
+      .contact-grid,
+      .business-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 22px;
+      }
+
+      .section {
+        padding: 42px 0;
+      }
+
+      .quick-contact {
+        padding: 28px 18px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="brand">DAINGUYEN COFFEE</div>
+
+    <h1>Kết nối cùng<br>Dainguyen Coffee</h1>
+
+    <div class="hero-line"></div>
+
+    <p>
+      Cà phê nguyên bản từ đại ngàn Tây Nguyên.
+      Chúng tôi đồng hành cùng khách hàng, quán cà phê,
+      đại lý và đối tác trên hành trình phát triển cà phê Việt Nam.
+    </p>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span>Contact us</span>
+          <h2>Thông tin liên hệ</h2>
+          <p>
+            Hãy liên hệ với chúng tôi để được tư vấn sản phẩm,
+            nhận báo giá hoặc trao đổi cơ hội hợp tác kinh doanh.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <article class="contact-card">
+            <div class="contact-icon">🏭</div>
+            <h3>Xưởng rang cà phê Đắk Lắk</h3>
+            <p>
+              1077 Giải Phóng, Xã Ea Đrăng,
+              Tỉnh Đắk Lắk, Việt Nam
+            </p>
+            <a class="contact-link"
+               href="https://www.google.com/maps/search/?api=1&query=1077+Giai+Phong+Ea+Drang+Dak+Lak"
+               target="_blank" rel="noopener noreferrer">
+              Xem trên Google Maps ↗
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">🏢</div>
+            <h3>Văn phòng Hồ Chí Minh</h3>
+            <p>
+              77A–77B Hiệp Bình, Phường Hiệp Bình,
+              TP. Hồ Chí Minh, Việt Nam
+            </p>
+            <a class="contact-link"
+               href="https://www.google.com/maps/search/?api=1&query=77A+77B+Hiep+Binh+Phuong+Hiep+Binh+Ho+Chi+Minh"
+               target="_blank" rel="noopener noreferrer">
+              Xem trên Google Maps ↗
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">📞</div>
+            <h3>Điện thoại</h3>
+            <p>
+              Tư vấn sản phẩm, báo giá và hợp tác kinh doanh.
+            </p>
+            <a class="contact-link" href="tel:+84792222232">
+              079 22222 32 · Gọi ngay
+            </a>
+          </article>
+
+          <article class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h3>Email doanh nghiệp</h3>
+            <p>
+              Gửi yêu cầu báo giá, thông tin sản phẩm
+              hoặc đề xuất hợp tác.
+            </p>
+            <a class="contact-link"
+               href="mailto:dainguyencoffee@gmail.com">
+              dainguyencoffee@gmail.com
+            </a>
+          </article>
+
+        </div>
+
+        <div class="quick-contact">
+          <h3>Hợp tác cùng Dainguyen Coffee</h3>
+          <p>
+            Chúng tôi sẵn sàng trao đổi với quán cà phê,
+            đại lý phân phối và đối tác có nhu cầu phát triển
+            sản phẩm cà phê rang xay.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary"
+               href="tel:+84792222232">
+              ☎ Gọi cho chúng tôi
+            </a>
+
+            <a class="button button-outline"
+               href="mailto:dainguyencoffee@gmail.com?subject=Hop%20tac%20Dainguyen%20Coffee">
+              ✉ Gửi email hợp tác
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section business-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span>Our services</span>
+          <h2>Đồng hành phát triển cà phê</h2>
+          <p>
+            Các giải pháp dành cho khách hàng và đối tác
+            trong ngành cà phê.
+          </p>
+        </div>
+
+        <div class="business-grid">
+
+          <div class="business-item">
+            <div class="symbol">☕</div>
+            <h3>Cà phê rang xay</h3>
+            <p>
+              Cung cấp cà phê cho quán, đại lý
+              và khách hàng cá nhân.
+            </p>
+          </div>
+
+          <div class="business-item">
+            <div class="symbol">🤝</div>
+            <h3>Hợp tác B2B</h3>
+            <p>
+              Trao đổi giải pháp cung ứng và
+              hợp tác kinh doanh lâu dài.
+            </p>
+          </div>
+
+          <div class="business-item">
+            <div class="symbol">📈</div>
+            <h3>Giải pháp quán cà phê</h3>
+            <p>
+              Tư vấn setup, đào tạo pha chế
+              và hỗ trợ vận hành.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>DAINGUYEN COFFEE</strong>
+    <p>Cà phê nguyên bản từ đại ngàn Tây Nguyên.</p>
+    <p>© <span id="year">2026</span> Dainguyen Coffee. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
